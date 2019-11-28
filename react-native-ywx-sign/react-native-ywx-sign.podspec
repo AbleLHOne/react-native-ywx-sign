@@ -26,8 +26,10 @@ s.platform     = :ios, '9.0'
 
 #需要包含的源文件,没有要开源出来的
 s.source_files = 'react-native-ywx-sign/RNReactNativeYwxSign/*.{h,m}'
+#依赖库
+#s.frameworks   = 'UIKit','Foundation'
 
-  s.dependency 'BjcaSignSDK'
+s.dependency 'BjcaSignSDK'
 
  
 

@@ -12,11 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BjcaRNTools : NSObject
 
-/**
- 获取顶层ctrl
 
- @return 
- */
 + (UIViewController *)getCurrentVC;
 @end
 
