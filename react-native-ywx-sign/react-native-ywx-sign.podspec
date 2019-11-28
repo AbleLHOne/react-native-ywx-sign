@@ -25,7 +25,7 @@ s.source       = { :git => 'https://github.com/AbleLHOne/react-native-ywx-sign.g
 s.platform     = :ios, '8.0'
 
 #需要包含的源文件,没有要开源出来的
-s.source_files = 'ios/*.{h,m}'
+s.source_files = 'react-native-ywx-sign/ios/*.{h,m}'
 
 s.dependency 'BjcaSignSDK','~> 3.2.0'
 s.dependency 'React'
