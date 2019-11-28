@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
 s.name         = 'react-native-ywx-sign'
 
 #版本号
-s.version      = '0.0.1'
+s.version      = '1.0.0'
 
 #许可证
 s.license      = { :type => 'MIT' }
@@ -22,13 +22,13 @@ s.summary      = "react-native-ywx-sign"
 s.source       = { :git => 'https://github.com/AbleLHOne/react-native-ywx-sign.git', :tag => s.version }
 
 #支持最小系统版本
-s.platform     = :ios, '9.0'
+s.platform     = :ios, '8.0'
 
 #需要包含的源文件,没有要开源出来的
-s.source_files = 'react-native-ywx-sign/RNReactNativeYwxSign/*.{h,m}'
+s.source_files = 'ios/*.{h,m}'
 
-  s.dependency 'BjcaSignSDK'
-  s.dependency 'React'
+s.dependency 'BjcaSignSDK','~> 3.2.0'
+s.dependency 'React'
  
 
 end
