@@ -1,7 +1,6 @@
 
 #import "RNReactNativeYwxSign.h"
 #import <UIKit/UIKit.h>
-//#import <>
 #import <BjcaSignSDK/BjcaSignManager.h>
 #import <BjcaSignSDK/BjcaPublicConst.h>
 #import "BjcaRNTools.h"
@@ -113,6 +112,15 @@ RCT_EXPORT_METHOD(sign:(NSString *)clientId uniqueIds:(NSArray *)uniqueIds compl
         self.callBack = callback;
         NSMutableArray *array = [NSMutableArray arrayWithArray:uniqueIds];
         [self.signer bjcaBatchSignList:array userClientId:clientId curViewCtrl:ctrl];
+    });
+}
+#pragma mark 批量签名业务2
+RCT_EXPORT_METHOD(signWithFirmId:(NSString*)clientId FirmId:(NSString *)firmId uniqueIds:(NSArray *)uniqueIds  completion:(RCTResponseSenderBlock)callback){
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIViewController *ctrl = [BjcaRNTools getCurrentVC];
+        self.callBack = callback;
+        NSMutableArray *array = [NSMutableArray arrayWithArray:uniqueIds];
+        [self.signer signWithFirmId:firmId uniqueIds:array userClientId:clientId curViewCtrl:ctrl];
     });
 }
 
